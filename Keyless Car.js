@@ -26,7 +26,7 @@ function checkDriverAge() {
 	}
 }
 
-// Testing out same function but with no prompts or alerts //
+// Testing out same function but with no prompts or alerts 
 
 function checkDriverAge(age) {
 	if (age>0 && age<18) {
@@ -37,5 +37,21 @@ function checkDriverAge(age) {
 		return "Enjoy the ride."
 	} else {
 		return "Invalid age."
+	}
+}
+
+// Same but with Function Expression method
+
+var checkDriverAge2 = function() {
+	var age = prompt("Welcome to your car. Please enter your age.");
+	age=Number(age);
+	if (age>0 && age<18) {
+		alert("Sorry, too young to operate this car.")
+	} else if (age===18) {
+		alert("Congratulations on your first year of driving. Enjoy the ride!")
+	} else if (age>18) {
+		alert("Enjoy the ride.")
+	} else {
+		alert("Invalid age.")
 	}
 }
