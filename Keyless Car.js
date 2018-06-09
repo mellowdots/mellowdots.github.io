@@ -12,14 +12,30 @@
 // IF they say they are over 18, respond with:
 // "Powering On. Enjoy the ride!"
 
-var age = prompt("Welcome to your car. Please enter your age.");
-age=Number(age);
-if (age>0 && age<18) {
-	alert("Sorry, too young to operate this car.")
-} else if (age===18) {
-	alert("Congratulations on your first year of driving. Enjoy the ride!")
-} else if (age>18) {
-	alert("Enjoy the ride.")
-} else {
-	alert("Invalid age.")
+function checkDriverAge() {
+	var age = prompt("Welcome to your car. Please enter your age.");
+	age=Number(age);
+	if (age>0 && age<18) {
+		alert("Sorry, too young to operate this car.")
+	} else if (age===18) {
+		alert("Congratulations on your first year of driving. Enjoy the ride!")
+	} else if (age>18) {
+		alert("Enjoy the ride.")
+	} else {
+		alert("Invalid age.")
+	}
+}
+
+// Testing out same function but with no prompts or alerts //
+
+function checkDriverAge(age) {
+	if (age>0 && age<18) {
+		return "Sorry, too young to operate this car."
+	} else if (age===18) {
+		return "Congratulations on your first year of driving. Enjoy the ride!"
+	} else if (age>18) {
+		return "Enjoy the ride."
+	} else {
+		return "Invalid age."
+	}
 }
